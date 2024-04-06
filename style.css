@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: Pregular;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'Plight';
+    src: url(./plain-light-webfont.woff) format('truetype');
+}
+
+@font-face {
+    font-family: 'Pregular';
+    src: url(./plain-regular-webfont.woff) format('truetype');
+}
+
+@font-face {
+    font-family: 'PlightI';
+    src: url(./silkserif-lightitalic-webfont.woff) format('truetype');
+}
+
+@font-face {
+    font-family: 'PregularI';
+    src: url(./silkserif-regularitalic-webfont.woff) format('truetype');
+}
+
+#loader{
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    background-color: #0B0B0B;
+    padding: 21vh 6.2vw;
+}
+
+.line{
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 3vw;
+}
+
+.line #line1-part1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.3vw;
+}
+
+#line1-part1 h5, #line1-part1 h6{
+    font-size: 4vw;
+    font-family: PlightI;
+    font-weight: 200;
+}
+
+#line1-part1 h5{
+    /* background-color: red; */
+    width: 6vw;
+    text-align: right;
+}
+
+#loader #now{
+    font-size: 6.3vw;
+    animation-name: now;
+    animation-duration: 1.7s;
+    animation-iteration-count: infinite;
+    margin-bottom: 0.2vw;
+}
+
+@keyframes now {
+    0%{
+        font-family: PlightI;
+        color: transparent;
+        opacity: 1;
+        -webkit-text-stroke: 1px white;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        font-family: Pregular;
+        opacity: 1;
+        color: white;
+    }
+    75%{
+        opacity: 0;
+    }
+    100%{
+        font-family: PlightI;
+        color: transparent;
+        opacity: 1;
+        -webkit-text-stroke: 1px white;
+    }
+}
+
+#loader .line h1{
+    font-size: 7.1vw;
+    font-weight: 500;
+}
+
+#main{
+    position: relative;
+    background-color: #111;
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+}
