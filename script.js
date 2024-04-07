@@ -22,25 +22,27 @@ tl.from("#line1-part1, #h2",{
     },
 });
 
-tl.to("#loader" , {
+tl.to("#loader h1, #loader h5, #loader h6" , {
     opacity:0,
     delay:3,
     duration:0.45,
+    stagger:0.2,
 })
 
-tl.from("#page1",{
-    y:1200,
-    // opacity:1,
+tl.to("#loader",{
+    y:-1200,
+    duration:0.7,
 })
 
 tl.to("#loader" , {
     display:"none",
 })
 
-// tl.from("#head h1, #head3-left" ,{
-//     y:120,
-//     stagger:0.1,
-// })
+tl.from("#head h1, #head3-left, #head3-right" ,{
+    y:120,
+    stagger:0.1,
+});
+
 }
 
 function cursAnime(){

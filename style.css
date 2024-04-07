@@ -11,6 +11,10 @@ html, body{
     width: 100%;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 @font-face {
     font-family: 'Plight';
     src: url(./plain-light-webfont.woff) format('truetype');
@@ -211,8 +215,8 @@ html, body{
     position: relative;
 }
 
-#head3-left h1, #head3-right h1{
-    transition: all ease 200ms;
+#head3 h1{
+    /* transition: all ease 0.3s; */
 }
 
 #head3-left h1:after {
@@ -237,16 +241,123 @@ html, body{
     background-color: currentColor;
 }
 
-#head3-left:hover h1{
+#head3-left:hover{
     color: transparent;
     -webkit-text-stroke: 0.7px #fff;
 }
 
-#head3-right:hover h1{
+#head3-right:hover{
     color: transparent;
     -webkit-text-stroke: 0.7px #fff;
 }
 
 #head1, #head2, #head3, #head4{
     overflow: hidden;
+}
+
+/********************************* PAGE - 2 ***********************************/
+
+#page2{
+    height: 100vh;
+    width: 100%;
+    background-color: #151515;
+    padding-top: 1px;
+}
+
+#video-contain{
+    width: 72vw;
+    /* overflow: hidden; */
+    height: 61vh;
+    margin-left: 28vw;
+    margin-top: 19.5vh;
+    position: relative;
+}
+
+#video-contain #image1{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#video-contain #play-button{
+    position: absolute;
+    top: -8%;
+    left: 69%;
+    width: 10vw;
+    height: 10vw;
+    background-color: #FFA63D;
+    border-radius: 10vw;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.4vw;
+}
+
+#play-button i{
+    font-size: 2.6vw;
+}
+
+#video1{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/********************************* PAGE - 3 ***********************************/
+
+#page3{
+    background-color: #4d4d4d;
+    height: 100vh;
+    width: 100%;
+}
+
+/********************************* PAGE - 4 ***********************************/
+
+#page4{
+    background-color: #151515;
+    height: 100vh;
+    width: 100%;
+}
+
+#zeroThree{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 5vw;
+    height: 18.7vw;
+}
+
+#zeroThree-left{
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#zeroThree-left h2{
+    font-size: 3.2vw;
+    font-family: PregularI;
+    font-weight: 500;
+    padding-bottom: 8.3vw;
+}
+
+#zeroThree-right{
+    height: 100%;
+    width: 67vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#zeroThree-right h1{
+    font-size: 7.21vw;
+    padding-bottom: 5.3vw;
+    font-weight: 500;
+}
+
+.head-line{
+    height: 0.077vw;
+    width: 100%;
+    background-color: #fff;
 }
