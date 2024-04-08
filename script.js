@@ -46,12 +46,19 @@ tl.from("#head h1, #head3-left, #head3-right" ,{
 }
 
 function cursAnime(){
-    document.addEventListener("mousemove",function(dets){
-        gsap.to("#curs",{
-            left:dets.x,
-            top:dets.y,
-        })
-    })
+    // document.addEventListener("mousemove",function(dets){
+    //     gsap.to("#curs",{
+    //         left:dets.x,
+    //         top:dets.y,
+    //     })
+    // })
+
+    Shery.mouseFollower({
+        //Parameters are optional.
+        skew: true,
+        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+        duration: 1,
+    });
     
     Shery.makeMagnet(".menu-opener__square" /* Element to target.*/, {
         //Parameters are optional.
