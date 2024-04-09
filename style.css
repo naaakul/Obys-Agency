@@ -11,10 +11,6 @@ html, body{
     width: 100%;
 }
 
-body::-webkit-scrollbar {
-    display: none;
-}
-
 @font-face {
     font-family: 'Plight';
     src: url(./plain-light-webfont.woff) format('truetype');
@@ -132,12 +128,13 @@ body::-webkit-scrollbar {
 #main{
     position: relative;
     background-color: #151515;
+    overflow-x: hidden;
 }
 
 #page1{
     height: 100vh;
     width: 100%;
-    background-color: #151515;
+    /* background-color: #151515; */
 }
 
 #nav{
@@ -180,6 +177,12 @@ body::-webkit-scrollbar {
 #nav-right{
     display: flex;
     gap: 2.5vw;
+}
+
+#head #h2{
+    width: 4vw;
+    height: fit-content;
+    overflow: hidden;
 }
 
 #head{
@@ -259,7 +262,7 @@ body::-webkit-scrollbar {
 #page2{
     height: 100vh;
     width: 100%;
-    background-color: #151515;
+    /* background-color: #151515; */
     padding-top: 1px;
 }
 
@@ -307,17 +310,145 @@ body::-webkit-scrollbar {
 /********************************* PAGE - 3 ***********************************/
 
 #page3{
-    background-color: #4d4d4d;
-    height: 100vh;
+    /* background-color: #4d4d4d; */
+    height: 237vw;
     width: 100%;
+    padding-top: 3vw;
+}
+
+#zeroTwo{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 5vw;
+    height: 18.7vw;
+}
+
+#zeroTwo-left{
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#zeroTwo-left h2{
+    font-size: 3.2vw;
+    font-family: PregularI;
+    font-weight: 500;
+    padding-bottom: 8.3vw;
+}
+
+#zeroTwo-right{
+    height: 100%;
+    width: 67vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#zeroTwo-right h1{
+    font-size: 7.21vw;
+    padding-bottom: 5.3vw;
+    font-weight: 500;
+}
+
+#ourPro{
+    position: relative;
+
+}
+
+#layer1{
+    position: relative;
+    padding: 8vw 5vw;
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+}
+
+.pros h3{
+    font-weight: 500;
+    font-size: 2.5vw;
+    /* font-family: Plight; */
+}
+
+.pros h4{
+    font-weight: 500;
+    font-size: 1vw;
+    /* font-family: Plight; */
+}
+
+.pros h4:nth-child(1){
+    width: 60%;
+}
+
+.pros{
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 41.5vw;
+    width: 23.3vw;
+    /* background-color: red; */
+    /* border: 2px solid black; */
+}
+
+.layer1-pro-low{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #3F7DF4; */
+    height: 5.8vw;
+    width: 100%;
+    align-items: center;
+    border-bottom: 0.077vw solid #fff;
+}
+
+#layer1-pro1{
+    background-color: #FFA63D;
+}
+
+#layer1-pro2{
+    margin-left: 2vw;
+    height: 51.9vw;
+    width: 31.5vw;
+    background: red;
+}
+
+#layer1-pro3{
+    margin-left: 1.701vw;
+    margin-top: 51vw;
+    height: 50.7vw;
+    width: 31.5vw;
+    background-color: #3F7DF4;
+    margin-bottom: 13.3vw;
+}
+
+#layer1-pro4{
+    position: absolute;
+    top: 100vw;
+    left: 30.2vw;
+    width: 31.4vw;
+    background-color: #fff;
+}
+
+#layer1-pro5{
+    position: absolute;
+    top: 130vw;
+    background-color: greenyellow;
+}
+
+#layer1-pro6{
+    height: 50.7vw;
+    width: 31.5vw;
+    margin-left: 58.5vw;
+    background-color: aquamarine;
 }
 
 /********************************* PAGE - 4 ***********************************/
 
 #page4{
-    background-color: #151515;
+    /* background-color: #151515; */
     height: fit-content;
     width: 100%;
+    /* padding-top: 3vw; */
 }
 
 #zeroThree{
@@ -440,6 +571,8 @@ body::-webkit-scrollbar {
     font-weight: 100;
 }
 
+/********************************* MARQUE ***********************************/
+
 #marque{
     margin-top: 6vw;
     height: 50vw;
@@ -498,6 +631,8 @@ body::-webkit-scrollbar {
         transform: translateX(0);
     }
 }
+
+/********************************* PAGE - 5 ***********************************/
 
 #page5{
     padding: 0 5vw 0 18vw;
