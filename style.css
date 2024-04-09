@@ -353,8 +353,9 @@ html, body{
 
 #ourPro{
     position: relative;
-
 }
+
+/* ----layer 1---- */
 
 #layer1{
     position: relative;
@@ -362,6 +363,7 @@ html, body{
     display: flex;
     /* justify-content: space-between; */
     flex-wrap: wrap;
+    /* background-color: papayawhip; */
 }
 
 .pros h3{
@@ -402,14 +404,14 @@ html, body{
 }
 
 #layer1-pro1{
-    background-color: #FFA63D;
+    /* background-color: #FFA63D; */
 }
 
 #layer1-pro2{
     margin-left: 2vw;
     height: 51.9vw;
     width: 31.5vw;
-    background: red;
+    /* background: red; */
 }
 
 #layer1-pro3{
@@ -417,7 +419,7 @@ html, body{
     margin-top: 51vw;
     height: 50.7vw;
     width: 31.5vw;
-    background-color: #3F7DF4;
+    /* background-color: #3F7DF4; */
     margin-bottom: 13.3vw;
 }
 
@@ -426,17 +428,101 @@ html, body{
     top: 100vw;
     left: 30.2vw;
     width: 31.4vw;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 #layer1-pro5{
     position: absolute;
     top: 130vw;
-    background-color: greenyellow;
+    /* background-color: greenyellow; */
 }
 
 #layer1-pro6{
     height: 50.7vw;
+    width: 31.5vw;
+    margin-left: 58.5vw;
+    /* background-color: aquamarine; */
+}
+
+/* ----layer 3---- */
+
+#layer3{
+    top: 0%;
+    position: absolute;
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    /* background-color: papayawhip; */
+    /* -------------------------------------------------------------------------------------------- */
+    scale: 1.1;
+}
+
+#layer3-in{
+    position: relative;
+    padding: 0 5vw;
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+}
+
+
+.layer3-images{
+    position: relative;
+    flex-shrink: 0;
+    margin-top: 4.3vw;
+    height: 28.5vw;
+    width: 23.3vw;
+    margin-top: 20vw;
+    overflow: hidden;
+    /* background-color: red; */
+    /* border: 2px solid black; */
+}
+
+.layer3-images img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#layer3-img-1{
+    background-color: #FFA63D;
+}
+
+#layer3-img-2{
+    margin-left: 2vw;
+    height: 37.9vw;
+    width: 31.5vw;
+    /* background: red; */
+}
+
+#layer3-img-3{
+    margin-left: 1.701vw;
+    margin-top: 58.5vw;
+    height: 37.7vw;
+    width: 31.5vw;
+    background-color: #3F7DF4;
+    margin-bottom: 13.3vw;
+}
+
+#layer3-img-4{
+    position: absolute;
+    top: 71vw;
+    left: 30.2vw;
+    width: 31.4vw;
+    background-color: #fff;
+}
+
+#layer3-img-5{
+    position: absolute;
+    top: 94.5vw;
+    background-color: greenyellow;
+}
+
+#layer3-img-6{
+    position: absolute;
+    top: 87.5vw;
+    height: 38.2vw;
     width: 31.5vw;
     margin-left: 58.5vw;
     background-color: aquamarine;
@@ -700,4 +786,9 @@ html, body{
     font-size: 1vw;
     font-weight: 500;
     margin-top: 2.5vw;
+}
+
+._canvas_container{
+    z-index: 999999 !important;
+    pointer-events: none;
 }
