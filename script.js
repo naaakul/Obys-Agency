@@ -74,7 +74,7 @@ tl.to("#loader" , {
 tl.from("#head h1, #head h2, #head3-left, #head3-right" ,{
     y:120,
     stagger:0.1,
-});
+},"-=1");
 
 }
 
@@ -92,18 +92,72 @@ function cursAnime(){
         ease: "cubic-bezier(0.23, 1, 0.320, 1)",
         duration: 1,
     });
-    
-    Shery.makeMagnet(".menu-opener__square" /* Element to target.*/, {
-        //Parameters are optional.
-        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-        duration: 1,
+
+    var videoContain = document.querySelector("#video-contain");
+    videoContain.addEventListener("mouseenter",function(){
+        videoContain.addEventListener("mousemove",function(dets){
+            gsap.to(".mousefollower",{
+                display:"none"
+            });
+            gsap.to("#play-button",{
+                left:dets.x - 500,
+                y:dets.y - 300
+            });
+        });
     });
-    
-    Shery.makeMagnet("#nav-right h4" /* Element to target.*/, {
-        //Parameters are optional.
-        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-        duration: 1,
+
+    videoContain.addEventListener("mouseleave", function(){
+        gsap.to(".mousefollower",{
+            display: "initial",
+        });
+        gsap.to("#play-button",{
+            top: "-8%",
+            left: "69%",
+        });
     });
+
+    var video = document.querySelector("#video1");
+    var flag = true;
+
+    videoContain.addEventListener("click",function(){
+        if(flag == true){
+            video.play()
+            video.style.opacity = 1
+            document.querySelector("#play-button").innerHTML = `<i class="ri-pause-fill"></i>`
+            gsap.to("#play-button",{
+                scale:0.5
+            })
+            flag = false
+        }
+        else{
+            video.pause()
+            video.style.opacity = 0
+            document.querySelector("#play-button").innerHTML = `<i class="ri-play-fill"></i>`
+            gsap.to("#play-button",{
+                scale:1
+            })
+            flag = true
+        }
+    })
+
+    document.addEventListener("mousemove",function(dets){
+        gsap.to("#flag",{
+            x:dets.x - 160,
+            y:dets.y - 220
+        })
+    })
+
+    document.querySelector("#head3").addEventListener("mouseenter" , function (){
+        gsap.to("#flag",{
+            opacity:1,
+        })
+    })
+
+    document.querySelector("#head3").addEventListener("mouseleave", function(){
+        gsap.to("#flag",{
+            opacity:0,
+        })
+    })
 }
 
 function guui(){
@@ -115,10 +169,30 @@ function guui(){
     })
 }
 
+function magnet(){
+    Shery.makeMagnet("#nav-right h4", {
+        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+        duration: 1,
+    });
+
+    Shery.makeMagnet(".menu-opener__square" /* Element to target.*/, {
+        //Parameters are optional.
+        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+        duration: 1,
+    });
+}
+
+
+magnet();
+
 locomotieAnime();
 
 loaderAnimation();
 
 cursAnime();
 
-guui();
+var screenWidth = window.innerWidth;
+
+if (screenWidth > 600) {
+    guui();
+}
